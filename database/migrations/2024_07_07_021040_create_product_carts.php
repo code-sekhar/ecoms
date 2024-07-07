@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email',50);
             $table->foreign('email')->references('email')->on('profiles')->restrictOnUpdate()->restrictOnDelete();
             $table->unsignedBigInteger('product_id');
+            //f-key
             $table->foreign('product_id')->references('id')->on('products')->restrictOnUpdate()->restrictOnDelete();
             $table->string('color',200);
             $table->string('size',200);
